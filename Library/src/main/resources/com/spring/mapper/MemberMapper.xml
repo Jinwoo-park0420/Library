@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.mapper.MemberMapper">
 <insert id="memberJoin" >
-insert into member1(memberno,name,jumin,userid,password,email,address,phone_number,gender,birth,lease_status,grade) values(seq_memberno.nextVal,#{name},#{jumin},#{userid},#{password},#{email},#{address},#{phone_number},#{gender},#{birth},0,0)
+insert into Library_member(name,jumin,userid,password,email,address,phone_number) values(#{name},#{jumin},#{userid},#{password},#{email},#{address},#{phone_number})
 </insert>
 
 <select id="login" resultType="com.spring.domain.LoginVO">
-select userid,password from member1 where userid=#{userid} and password=#{password}
+select userid,password from Library_member where userid=#{userid} and password=#{password}
 </select>
 
 </mapper>

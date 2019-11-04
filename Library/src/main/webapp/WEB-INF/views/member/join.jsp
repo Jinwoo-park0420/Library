@@ -85,7 +85,7 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>이름</label>
-              <input type="text" class="form-control" placeholder="이름" id="name" name="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" class="form-control" placeholder="이름" id="name" name="name" required data-validation-required-message="이름을 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -106,28 +106,28 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>아이디</label>
-              <input type="text" class="form-control" placeholder="아이디" id="userid" name="userid" required data-validation-required-message="Please enter your email address.">
+              <input type="text" class="form-control" placeholder="아이디" id="userid" name="userid" required data-validation-required-message="아이디를 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>비밀번호</label>
-              <input type="password" class="form-control" placeholder="비밀번호" id="password" name="password" required data-validation-required-message="Please enter your phone number.">
+              <input type="password" class="form-control" placeholder="비밀번호" id="password" name="password" required data-validation-required-message="비밀번호를 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>비밀번호 확인</label>
-              <input type="password" class="form-control" placeholder="비밀번호 확인" id="current_password" name="current_password" required data-validation-required-message="Please enter your phone number.">
+              <input type="password" class="form-control" placeholder="비밀번호 확인" id="current_password" name="current_password" required data-validation-required-message="비밀번호를 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>E-Mail</label>
-              <input type="email" class="form-control" placeholder="E-Mail" id="email" name="email" required data-validation-required-message="Please enter your phone number.">
+              <input type="email" class="form-control" placeholder="E-Mail" id="email" name="email" required data-validation-required-message="이메일을 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -147,34 +147,12 @@
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>핸드폰 번호</label>
-              <input type="tel" class="form-control" placeholder="핸드폰 번호" id="phone_number" name="phone_number" required data-validation-required-message="Please enter your phone number.">
+              <input type="tel" class="form-control" placeholder="핸드폰 번호" id="phone_number" name="phone_number" required data-validation-required-message="핸드폰번호를 입력 바랍니다.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
-          <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>성별</label>
-              
-              <div class="form-check form-check-inline">
-				<input type="radio" id="gender" name="gender" value="남" class="form-check-input"/>남
-		  	</div>
-		  	<div class="form-check form-check-inline">
-				<input type="radio"  name="gender" value="여" class="form-check-input"/>여
-			</div>
-			<small id="gender" class="text-info"></small>
-              
-            
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>생년월일</label>
-              <input type=text class="form-control" placeholder="생년월일" id="birth" name="birth" >
-            
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
+        
+      
           <div id="success"></div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
@@ -255,18 +233,7 @@ function check_jumin() {
    return false;
   }
 
-  // 생년월일 검사
-  var birthYear = (jumin.charAt(6) <= "2") ? "19" : "20";
-  birthYear += jumin.substr(0, 2);
-  var birthMonth = jumin.substr(2, 2) - 1;
-  var birthDate = jumin.substr(4, 2);
-  var birth = new Date(birthYear, birthMonth, birthDate);
-
-  if ( birth.getYear() % 100 != jumin.substr(0, 2) ||
-       birth.getMonth() != birthMonth ||
-       birth.getDate() != birthDate) {
-     return false;
-  }
+ 
 
   // Check Sum 코드의 유효성 검사
   var buf = new Array(13);
