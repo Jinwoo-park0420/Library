@@ -26,33 +26,65 @@
 <title>게시판</title>
 </head>
 <body>
-<h3 align="center">게시판</h3>
-<div align="right">
-<input type="button" value="글쓰기"/>
-</div>
-<div align="center">
-<table>
-<tr>
-<th>글번호</th>
-<th>제목</th>
-<th>작성자</th>
-<th>작성일</th>
-<th>조회수</th>
-</tr>
-<tr>
-<td>1</td>
-<td>title</td>
-<td>writer</td>
-<td>regdate</td>
-<td>readcnt</td>
-</tr>
-</table>
-</div>
-<div align="center">
-<input type="text" name="keyword"/>
-<button class="navbar-toggler navbar-toggler-right" type="button">검색</button>
-</div>	
+	<header class="masthead"
+		style="background-image: url('/resources/img/home-bg.jpg')">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="site-heading">
+				
+						<div class="box">
+							<div class="container-1">
+							글 검색<input type="search" id="search" placeholder="Search..." /> <i class="fa fa-search"><span class="icon"></span></i>
 
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+		<!-- Main Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="post-preview">
+					<table>
+					<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>작성일</th>
+					<th>조회수</th>
+					</tr>
+					<tr>
+					<td>1</td>
+					<td>title</td>
+					<td>writer</td>
+					<td>regdate</td>
+					<td>readcnt</td>
+					</tr>
+					</table>
+				</div>
+				<hr>
+				<div class="post-preview">
+					
+				</div>
+				
+				</div>
+
+				</div>
+				<!-- Pager -->
+				<div class="clearfix">
+					<a class="btn btn-primary float-right" href="/board/boardinsert">글쓰기
+						&rarr;</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 <!-- Bootstrap core JavaScript -->
