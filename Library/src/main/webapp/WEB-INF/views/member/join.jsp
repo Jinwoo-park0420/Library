@@ -93,13 +93,12 @@
             <div class="form-group floating-label-form-group controls">
               <label>주민등록번호</label>
     
-    	<input type="tel" id="jumin" name="jumin" placeholder="주민등록번호">
-             <!--  <input type="tel"  placeholder="주민등록번호" id="jumin1"  maxlength=6>
+             <input type="tel"  placeholder="주민등록번호" id="jumin1"  maxlength=6>
               -
               <input type="password"  placeholder="주민등록번호" id="jumin2" maxlength=7> 
               
               <input type="button" onclick="checks();" value="검사"/>
- -->
+
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -134,13 +133,12 @@
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>주소</label>
-           <input type="text" name="address" id="address" placeholder="주소">
-           
-           <!--   우편번호 : <input type="text" name="zip" style="width:80px; height:26px;" />
-<button type="button" style="width:60px; height:32px;" onclick="openZipSearch()">검색</button><br>
-주소 : <input type="text" name="addr1" style="width:300px; height:30px;" readonly /><br>
-상세 : <input type="text" name="addr2" style="width:300px; height:30px;" />
-              -->
+                  
+	  우편번호 : <input type="text" name="zip" style="width:80px; height:26px;" />
+	<button type="button" style="width:60px; height:32px;" onclick="openZipSearch()">검색</button><br>
+	주소 : <input type="text" name="addr1" style="width:300px; height:30px;" readonly /><br>
+	상세 : <input type="text" name="addr2" style="width:300px; height:30px;" />
+          
               <p class="help-block text-danger"></p>
             </div>
           </div>
