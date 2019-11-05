@@ -34,6 +34,91 @@
 <link href="/resources/css/clean-blog.min.css" rel="stylesheet">
 
 </head>
+<style>
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  
+  
+  font-family: Arial;
+    padding: 0px 20px;
+}
+
+
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+ul li { 
+  list-style-type:none;  
+   margin: 5;
+
+}
+
+.menu a{cursor:pointer;}
+.menu .hide{display:none;}
+
+
+</style>
+
+
 
 <body>
 
@@ -73,18 +158,67 @@
 	<!-- Page Header -->
 	<header class="masthead"
 		style="background-image: url('/resources/img/home-bg.jpg')">
-		<div class="overlay"></div>
+		<div class="overlay">
+		
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-10 mx-auto">
 					<div class="site-heading">
+				<div class="navbar">
 				
+  <li class="menu">
+   <a> <label>도서관 안내</label></a>
+    <ul class="hide">
+    <li><a href="#">asd</a></li>
+    <li><a href="#">asd</a></li>
+    <li><a href="#">asd</a></li>
+    </ul>
+    
+  </li>
+  
+  <li class="menu">
+   <a> <label>도서관 안내</label></a>
+    <ul class="hide">
+    <li>asd</li>
+    <li> asd</li>
+    <li> asd</li>
+    </ul>
+    
+  </li>
+  
+  <li class="menu">
+   <a> <label>도서관 안내</label></a>
+    <ul class="hide">
+    <li>asd</li>
+    <li> asd</li>
+    <li> asd</li>
+    </ul>
+    
+  </li>
+  
+  <li class="menu">
+   <a> <label>도서관 안내</label></a>
+    <ul class="hide">
+    <li>asd</li>
+    <li> asd</li>
+    <li> asd</li>
+    </ul>
+    
+  </li>
+  
+  </div>
+</div>
+<br>
+
+					<form action="">
 						<div class="box">
 							<div class="container-1">
-							도서 검색<input type="search" id="search" placeholder="Search..." /> <i class="fa fa-search"><span class="icon"></span></i>
+							<input type="search" id="search" placeholder="Search..." /> <button type="submit">검색</button>
 
 							</div>
 						</div>
+</form>
 
 					</div>
 				</div>
@@ -190,6 +324,25 @@
 
 	<!-- Custom scripts for this template -->
 	<script src="/resources/js/clean-blog.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	
+    $(".menu>a").click(function(){
+        var submenu = $(this).next("ul");
+
+        // submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
+        if( submenu.is(":visible") ){
+            submenu.slideUp();
+        }else{
+            submenu.slideDown();
+        }
+    }).mouseover(function(){
+        $(this).next("ul").slideDown();
+    });
+})
+   
+</script>
 
 </body>
 
