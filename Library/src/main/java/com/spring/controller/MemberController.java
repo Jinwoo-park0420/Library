@@ -41,9 +41,12 @@ public class MemberController {
 		log.info("mypage페이지 요청");
 	}
 	@PostMapping("/join")
-	public String join(MemberVO vo) {
+	public String join(MemberVO vo, String addr1, String addr2, String jumin1, String jumin2) {
 		log.info("회원가입 실행 요청");
 		System.out.println(vo);
+		
+		vo.setAddress(addr1+" "+addr2);
+		vo.setJumin(jumin1+" "+jumin2);
 		
 		int result=service.memberJoin(vo);
 		if(result>0)
