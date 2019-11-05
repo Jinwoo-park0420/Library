@@ -7,3 +7,5 @@ create table Library_book(
 	Library_newbookdate date default sysdate,
 	Library_lenbookdate date default sysdate
 );
+
+select * from Library_book;
