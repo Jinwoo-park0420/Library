@@ -4,4 +4,8 @@
 <select id="selectAll" resultType="com.spring.domain.BoardVO">
 select * from library_board
 </select>
+
+<insert id="insertboard">
+insert into library_board values(#{title})
+</insert>
 </mapper>

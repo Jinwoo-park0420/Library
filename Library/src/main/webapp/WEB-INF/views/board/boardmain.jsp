@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,19 +56,21 @@
 				<div class="post-preview">
 					<table>
 					<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>작성일</th>
-					<th>조회수</th>
+					<th>번 호   </th>
+					<th>제 목   </th>
+					<th>작 성 자   </th>
+					<th>작 성 일   </th>
+					<th>조 회 수   </th>
 					</tr>
+					<c:forEach var="vo" items="${list}">
 					<tr>
-					<td>1</td>
-					<td>title</td>
-					<td>writer</td>
-					<td>regdate</td>
-					<td>readcnt</td>
+					<td>${vo.bno}</td>
+					<td>${vo.title}</td>
+					<td>${vo.writer}</td>
+					<td>${vo.regdate}</td>
+					<td>${vo.readcnt}</td>
 					</tr>
+					</c:forEach>
 					</table>
 				</div>
 				<hr>
